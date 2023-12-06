@@ -1,0 +1,158 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=8644, tid=0x0000000000002224
+#
+# JRE version:  (8.0) (build )
+# Java VM: OpenJDK 64-Bit Server VM (25.71-b00 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002932800):  JavaThread "Unknown thread" [_thread_in_vm, id=8740, stack(0x0000000002830000,0x0000000002930000)]
+
+Stack: [0x0000000002830000,0x0000000002930000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002932800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=8740, stack(0x0000000002830000,0x0000000002930000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 18432K, used 317K [0x00000000ebd00000, 0x00000000ed180000, 0x0000000100000000)
+  eden space 15872K, 2% used [0x00000000ebd00000,0x00000000ebd4f5d0,0x00000000ecc80000)
+  from space 2560K, 0% used [0x00000000ecf00000,0x00000000ecf00000,0x00000000ed180000)
+  to   space 2560K, 0% used [0x00000000ecc80000,0x00000000ecc80000,0x00000000ecf00000)
+ ParOldGen       total 42496K, used 0K [0x00000000c3600000, 0x00000000c5f80000, 0x00000000ebd00000)
+  object space 42496K, 0% used [0x00000000c3600000,0x00000000c3600000,0x00000000c5f80000)
+ Metaspace       used 777K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 74K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011df0000,0x0000000011fe0000] byte_map_base: 0x00000000117d5000
+
+Marking Bits: (ParMarkBitMap*) 0x000000006061be50
+ Begin Bits: [0x0000000012530000, 0x0000000013458000)
+ End Bits:   [0x0000000013458000, 0x0000000014380000)
+
+Polling page: 0x00000000005f0000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000002a30000, 0x0000000002ca0000, 0x0000000011a30000]
+ total_blobs=57 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.019 loading class java/lang/Short
+Event: 0.019 loading class java/lang/Short done
+Event: 0.019 loading class java/lang/Integer
+Event: 0.020 loading class java/lang/Integer done
+Event: 0.020 loading class java/lang/Long
+Event: 0.020 loading class java/lang/Long done
+Event: 0.020 loading class java/lang/NullPointerException
+Event: 0.020 loading class java/lang/NullPointerException done
+Event: 0.020 loading class java/lang/ArithmeticException
+Event: 0.020 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff769850000 - 0x00007ff769885000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\bin\java.exe
+0x00007ffd630b0000 - 0x00007ffd6329e000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffd62cf0000 - 0x00007ffd62da3000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ffd5fb10000 - 0x00007ffd5fdad000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ffd60c50000 - 0x00007ffd60cf7000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ffd60e80000 - 0x00007ffd60f1e000 	C:\Windows\System32\msvcrt.dll
+0x00007ffd62f60000 - 0x00007ffd62fff000 	C:\Windows\System32\sechost.dll
+0x00007ffd60310000 - 0x00007ffd6042e000 	C:\Windows\System32\RPCRT4.dll
+0x00007ffd62b50000 - 0x00007ffd62ce7000 	C:\Windows\System32\USER32.dll
+0x00007ffd601c0000 - 0x00007ffd601e0000 	C:\Windows\System32\win32u.dll
+0x00007ffd60c20000 - 0x00007ffd60c49000 	C:\Windows\System32\GDI32.dll
+0x00007ffd5ff90000 - 0x00007ffd6013b000 	C:\Windows\System32\gdi32full.dll
+0x00007ffd5fef0000 - 0x00007ffd5ff90000 	C:\Windows\System32\msvcp_win.dll
+0x00007ffd601e0000 - 0x00007ffd602da000 	C:\Windows\System32\ucrtbase.dll
+0x00007ffd49ce0000 - 0x00007ffd49f59000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17763.5122_none_de6fbcf2534c9850\COMCTL32.dll
+0x00007ffd60f20000 - 0x00007ffd6124b000 	C:\Windows\System32\combase.dll
+0x00007ffd5fe60000 - 0x00007ffd5fee2000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ffd602e0000 - 0x00007ffd6030e000 	C:\Windows\System32\IMM32.DLL
+0x00000000606a0000 - 0x0000000060772000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\msvcr100.dll
+0x000000005fe50000 - 0x0000000060699000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\server\jvm.dll
+0x00007ffd60e70000 - 0x00007ffd60e78000 	C:\Windows\System32\PSAPI.DLL
+0x00007ffd52c80000 - 0x00007ffd52c8a000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ffd5dba0000 - 0x00007ffd5dba9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffd5b380000 - 0x00007ffd5b3a4000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffd61250000 - 0x00007ffd612bd000 	C:\Windows\System32\WS2_32.dll
+0x00007ffd5b350000 - 0x00007ffd5b37d000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffd5f880000 - 0x00007ffd5f8ca000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ffd5d5b0000 - 0x00007ffd5d5bf000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\verify.dll
+0x00007ffd5c3e0000 - 0x00007ffd5c409000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\java.dll
+0x00007ffd5d550000 - 0x00007ffd5d566000 	C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK\jre\bin\zip.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: <unknown>
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Unity\Hub\Editor\2021.3.19f1\Editor\Data\PlaybackEngines\AndroidPlayer\OpenJDK
+JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF-8
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Users\admin\AppData\Local\Microsoft\WindowsApps;C:\Users\admin\.dotnet\tools
+USERNAME=admin
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 126 Stepping 5, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 17763 (10.0.17763.4974)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 126 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 3966648k(318736k free), swap 6063800k(6084k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.71-b00) for windows-amd64 JRE (1.8.0-adoptopenjdk-_2018_05_19_00_59-b00), built on May 19 2018 01:02:12 by "jenkins" with MS VC++ 10.0 (VS2010)
+
+time: Tue Dec 05 19:50:01 2023
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
